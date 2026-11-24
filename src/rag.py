@@ -92,10 +92,8 @@ def extract_citations(answer: str, n_passages: int) -> list[int]:
     return valid
 
 
-def answer(question: str, k: int | None = None) -> RagAnswer:
-    passages = retrieve(question, k)
-    logger.info("Retrieved %d passages | distances: %s", len(passages), [round(p.distance, 3) for p in passages])
-
+def generate(question: str, passages: list[Passage]) -> RagAnswer:
+    """LLM call over already-retrieved passages (guard.py retrieves and checks first)."""
     text = chat(build_messages(question, passages))
 
     cited_idx = set(extract_citations(text, len(passages)))
@@ -103,6 +101,13 @@ def answer(question: str, k: int | None = None) -> RagAnswer:
     if not cited and text.strip().rstrip(".").lower() != NO_ANSWER.lower():
         logger.warning("Answer has no valid citations; treat with suspicion")
     return RagAnswer(question=question, answer=text, cited=cited, retrieved=passages)
+
+
+def answer(question: str, k: int | None = None) -> RagAnswer:
+    """Unguarded pipeline (retrieve + generate). The app should call guard.respond() instead."""
+    passages = retrieve(question, k)
+    logger.info("Retrieved %d passages | distances: %s", len(passages), [round(p.distance, 3) for p in passages])
+    return generate(question, passages)
 
 
 # --------------------------------------------------------------------------- #

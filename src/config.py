@@ -23,6 +23,10 @@ class Settings:
     chunk_max_chars: int = int(os.getenv("CHUNK_MAX_CHARS", "900"))
     chunk_overlap_chars: int = int(os.getenv("CHUNK_OVERLAP_CHARS", "150"))
     top_k: int = int(os.getenv("TOP_K", "4"))
+        # --- guard ---
+    guard_max_distance: float = float(os.getenv("GUARD_MAX_DISTANCE", "0.70"))
+    guard_require_citations: bool = os.getenv("GUARD_REQUIRE_CITATIONS", "true").lower() == "true"
+    guard_max_question_chars: int = int(os.getenv("GUARD_MAX_QUESTION_CHARS", "500"))
 
     # --- LLM (any OpenAI-compatible provider) ---
     llm_api_key: str = os.getenv("LLM_API_KEY") or os.getenv("GROQ_API_KEY", "")
