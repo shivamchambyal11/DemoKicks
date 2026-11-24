@@ -1,0 +1,2 @@
+chromadb ==  1.5.9, 6.3.0, 1.2.4
+OpenAI version - 3.58.0

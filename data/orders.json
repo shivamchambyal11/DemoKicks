@@ -1,0 +1,117 @@
+[
+  {
+    "order_id": "DK1001",
+    "customer_name": "Ava Thompson",
+    "email": "ava.thompson@example.com",
+    "order_date": "2026-11-05",
+    "status": "delivered",
+    "shipping_method": "Standard",
+    "carrier": "UPS",
+    "tracking_number": "DKT100100100",
+    "shipped_date": "2026-11-06",
+    "delivered_date": "2026-11-13",
+    "estimated_delivery": null,
+    "items": [
+      {"name": "AeroRun 1 - Grey", "size": "US M 10", "quantity": 1, "price": 49.00, "final_sale": true},
+      {"name": "CourtLine Classic - White", "size": "US M 9", "quantity": 1, "price": 89.00, "final_sale": false}
+    ],
+    "total": 138.00,
+    "refund_status": null,
+    "refund_expected_by": null
+  },
+  {
+    "order_id": "DK1002",
+    "customer_name": "Rahul Mehta",
+    "email": "rahul.mehta@example.com",
+    "order_date": "2026-11-21",
+    "status": "shipped",
+    "shipping_method": "Express",
+    "carrier": "FedEx",
+    "tracking_number": "DKT100200200",
+    "shipped_date": "2026-11-23",
+    "delivered_date": null,
+    "estimated_delivery": "2026-11-25",
+    "items": [
+      {"name": "TrailBlazer GTX - Olive", "size": "US M 11", "quantity": 1, "price": 119.00, "final_sale": false}
+    ],
+    "total": 133.99,
+    "refund_status": null,
+    "refund_expected_by": null
+  },
+  {
+    "order_id": "DK1003",
+    "customer_name": "Sofia Alvarez",
+    "email": "sofia.alvarez@example.com",
+    "order_date": "2026-11-24",
+    "status": "processing",
+    "shipping_method": "Standard",
+    "carrier": null,
+    "tracking_number": null,
+    "shipped_date": null,
+    "delivered_date": null,
+    "estimated_delivery": null,
+    "items": [
+      {"name": "AeroRun 2 - Black/White", "size": "US M 8", "quantity": 1, "price": 109.00, "final_sale": false}
+    ],
+    "total": 109.00,
+    "refund_status": null,
+    "refund_expected_by": null
+  },
+  {
+    "order_id": "DK1004",
+    "customer_name": "Liam O'Connor",
+    "email": "liam.oconnor@example.com",
+    "order_date": "2026-09-30",
+    "status": "delivered",
+    "shipping_method": "Standard",
+    "carrier": "USPS",
+    "tracking_number": "DKT100400400",
+    "shipped_date": "2026-10-01",
+    "delivered_date": "2026-10-08",
+    "estimated_delivery": null,
+    "items": [
+      {"name": "CourtLine Classic - White", "size": "US M 10", "quantity": 1, "price": 89.00, "final_sale": false}
+    ],
+    "total": 89.00,
+    "refund_status": null,
+    "refund_expected_by": null
+  },
+  {
+    "order_id": "DK1005",
+    "customer_name": "Priya Nair",
+    "email": "priya.nair@example.com",
+    "order_date": "2026-11-17",
+    "status": "cancelled",
+    "shipping_method": "Standard",
+    "carrier": null,
+    "tracking_number": null,
+    "shipped_date": null,
+    "delivered_date": null,
+    "estimated_delivery": null,
+    "items": [
+      {"name": "TrailBlazer GTX - Olive", "size": "US M 7", "quantity": 1, "price": 119.00, "final_sale": false}
+    ],
+    "total": 119.00,
+    "refund_status": "refunded",
+    "refund_expected_by": null
+  },
+  {
+    "order_id": "DK1006",
+    "customer_name": "Noah Williams",
+    "email": "noah.williams@example.com",
+    "order_date": "2026-10-30",
+    "status": "return_received",
+    "shipping_method": "Standard",
+    "carrier": "UPS",
+    "tracking_number": "DKT100600600",
+    "shipped_date": "2026-11-02",
+    "delivered_date": "2026-11-09",
+    "estimated_delivery": null,
+    "items": [
+      {"name": "AeroRun 2 - Black/White", "size": "US M 9", "quantity": 1, "price": 109.00, "final_sale": false}
+    ],
+    "total": 109.00,
+    "refund_status": "approved",
+    "refund_expected_by": "2026-12-01"
+  }
+]
