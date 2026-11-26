@@ -23,6 +23,8 @@ class Settings:
     chunk_max_chars: int = int(os.getenv("CHUNK_MAX_CHARS", "900"))
     chunk_overlap_chars: int = int(os.getenv("CHUNK_OVERLAP_CHARS", "150"))
     top_k: int = int(os.getenv("TOP_K", "4"))
+    orders_path: Path = ROOT_DIR / "data" / "orders.json"
+    max_failed_lookups: int = int(os.getenv("MAX_FAILED_LOOKUPS", "3"))
         # --- guard ---
     guard_max_distance: float = float(os.getenv("GUARD_MAX_DISTANCE", "0.70"))
     guard_require_citations: bool = os.getenv("GUARD_REQUIRE_CITATIONS", "true").lower() == "true"
