@@ -104,6 +104,17 @@ export default function ChatWidget() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }, [messages, isLoading, open])
 
+    // Lets the storefront open the chat (optionally with a question) through a window event.
+  useEffect(() => {
+    const handler = (event) => {
+      setOpen(true)
+      const question = event.detail?.question
+      if (question) send(question)
+    }
+    window.addEventListener('dk:open-chat', handler)
+    return () => window.removeEventListener('dk:open-chat', handler)
+  }, [send])
+
   const submit = (event) => {
     event.preventDefault()
     if (!draft.trim() || isLoading) return
